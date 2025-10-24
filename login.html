@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - AlgoEdge</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+    .login-box {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2 class="text-center mb-4">AlgoEdge Login</h2>
+    <form>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" required />
+      </div>
+      <button type="submit" class="btn btn-success w-100">Login</button>
+      <p class="mt-3 text-center"><a href="register.html" class="text-light">New user? Register here</a></p>
+    </form>
+  </div>
+</body>
+</html>

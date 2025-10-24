@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoEdge - AI Resume Optimizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">AlgoEdge</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Optimize Your Resume with AI</h1>
+    <p>Get personalized feedback, ATS simulation, and career insights instantly.</p>
+    <a href="register.html" class="btn">Get Started</a>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="course-list">
+      <div class="course-card">
+        <img src="https://source.unsplash.com/400x250/?python,code" alt="Python" />
+        <h3>AI Resume Analyzer</h3>
+        <p>Evaluate structure, keywords, and relevance using intelligent algorithms.</p>
+        <a href=""><button>Analyze Now</button></a>
+      </div>
+      <div class="course-card">
+        <img src="https://source.unsplash.com/400x250/?webdevelopment" alt="Web Dev" />
+        <h3>JD Matching</h3>
+        <p>Compare your resume with job descriptions and get match scores.</p>
+        <a href=""><button>---></button></a>
+      </div>
+      <div class="course-card">
+        <img src="https://source.unsplash.com/400x250/?ai,farming" alt="AI in Farming" />
+        <h3>Career Dashboard</h3>
+        <p>Visualize your strengths, skills, and job readiness through charts.</p>
+        <a href="dashboard.html"><button>----></button></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 . All rights reserved.</p>
+  </footer>
+
+  <script>
+// Toggle mobile navigation menu
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.createElement('button');
+  navToggle.textContent = '☰';
+  navToggle.style.background = 'none';
+  navToggle.style.border = 'none';
+  navToggle.style.color = 'white';
+  navToggle.style.fontSize = '1.5rem';
+  navToggle.style.cursor = 'pointer';
+  navToggle.style.display = 'none';
+
+  const nav = document.querySelector('nav');
+  const navList = document.querySelector('nav ul');
+  const header = document.querySelector('header');
+
+  navToggle.classList.add('nav-toggle');
+  header.insertBefore(navToggle, nav);
+
+  navToggle.addEventListener('click', () => {
+    navList.classList.toggle('show-menu');
+  });
+
+  // Responsive toggle visibility
+  const handleResize = () => {
+    if (window.innerWidth <= 575.98) {
+      navToggle.style.display = 'block';
+      navList.style.display = 'none';
+    } else {
+      navToggle.style.display = 'none';
+      navList.style.display = 'flex';
+    }
+  };
+
+  window.addEventListener('resize', handleResize);
+  handleResize();
+});
+</script>
+</body>
+</html>

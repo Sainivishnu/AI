@@ -1,0 +1,338 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f7f9fc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background: #1e2a78;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  color: white;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #fff;
+  color: #3a7bd5;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Courses */
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.course-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+}
+
+.course-card img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.course-card h3 {
+  padding: 1rem 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.course-card p {
+  padding: 0 1rem 1rem;
+  color: #555;
+}
+
+.course-card button {
+  margin: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: #1e2a78;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.course-card button:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* About */
+.about {
+  background: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  background: #1e2a78;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Form Section */
+.form-section {
+  padding: 4rem 2rem;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  height: 80vh;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-box input,
+.form-box textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-box button {
+  padding: 0.8rem;
+  background: #1e2a78;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.form-box button:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+
+/* Extra Small Devices (phones) */
+@media (max-width: 575.98px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .features h2,
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .course-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .form-section {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .form-box {
+    padding: 1.5rem;
+  }
+
+  .form-box input,
+  .form-box textarea {
+    font-size: 0.9rem;
+  }
+
+  .form-box button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium Devices (tablets) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .course-card {
+    width: 80%;
+  }
+
+  .form-section {
+    height: auto;
+  }
+}
+
+/* Large Devices (small laptops) */
+@media (min-width: 769px) and (max-width: 991.98px) {
+  .course-card {
+    width: 45%;
+  }
+
+  .form-section {
+    max-width: 600px;
+  }
+}
+
+/* Extra Large Devices (desktops) */
+@media (min-width: 992px) {
+  .course-card {
+    width: 300px;
+  }
+
+  .form-section {
+    max-width: 500px;
+  }
+}
+
+nav ul.show-menu {
+  display: flex !important;
+  flex-direction: column;
+  gap: 1rem;
+  background: #1e2a78;
+  padding: 1rem;
+}
